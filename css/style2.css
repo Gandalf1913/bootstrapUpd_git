@@ -1,0 +1,902 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+}
+
+
+/* MY Settings body */
+body {
+  width: 100%;
+  height: 100%;
+  color: #000;
+  background-color: #FFF;
+  margin: 0px auto;
+  position: relative;                 /* mandatory for tranparent to black navbar*/
+  
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-weight: normal;
+}
+
+/* MY Settings body END*/
+
+/* JavaScript Turned Off  fonts paragraphs h1 to h6  a ref*/
+
+.no-js #loader-wrapper {
+  display: none;
+}
+
+.no-js h1 {
+  color: #222222;
+}
+
+.color {
+  color: #00009C;
+}
+
+.spacer-10 {
+  padding: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  margin: 0 0 30px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 500px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      font-weight: 400;
+  }
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 25px;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+
+a {
+  color: #00009C;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+  color: #0000DD;
+}
+
+/* JavaScript Turned Off  fonts paragraphs h1 to h6  a ref*/
+
+
+
+
+
+
+.navbar {
+  margin-bottom: 0;
+  z-index: 999;
+}
+
+
+
+
+
+
+
+
+/* MY cCostom Navbar*/
+
+.topnav {
+  overflow: hidden;
+  font-size: 16px;
+  position:fixed;   /*   faz a navbar ficar fixa ao conteudo              */
+  z-index:1; /*Add this  faz o conteudo passar por baixo on scroll                  */
+  width:100%; /* estica o conteudo na nav para todo o ecra     comprimento            */
+  text-transform: uppercase; /* top nav caracteres texto letra grande      */
+  margin-bottom: 0;
+  border-color: transparent;
+  background-color: black;  /*cor fundo topnav preto mandatory for navbar change transparent to black*/
+  transition: background-color 1.3s; /* Adicionar transição suave na mudança de cor de fundo */
+  letter-spacing: 1px;
+  padding: 10px 0;
+  height: 35px;           /*height of navbar*/
+}
+
+
+
+
+.topnav a {
+
+
+  color: whitesmoke; /*cor BRANCO de default de tudo que esta dentro de a href*/
+  text-align: center;
+
+  text-decoration: none;
+  font-size: 13px;
+  margin-top: 0px;
+  margin-right: 20px;
+  font-family: "Lato", sans-serif;            /*aqui a font para os campos da nav  a  tag da ref e link */
+
+
+}
+
+.topnav a:hover {
+  outline: 0;
+  color: #ccc;                  /*passa a cor para cinza light quando se passa o rato por cima*/
+  background-color: transparent;     
+
+}
+
+
+
+
+.topnav a.active {
+  background-color:orange;     /*changes the  color highlight of links on navbar*/
+
+}
+
+/*
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: lightskyblue;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+
+  .topnav a,
+  .topnav input[type=text],
+  .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+*/
+.topnav img {
+
+
+  margin-right: 10px;
+  /* Adiciona margem à direita da imagem */
+  margin-left: 30px;
+  /* Adiciona margem à esquerda da imagem */
+  vertical-align: middle;
+  /* Alinha verticalmente a imagem */
+}
+
+
+
+/* MY cCostom Navbar END*/
+
+/* Mclass for change navbar color from black>transparent<black*/
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.bg-black {
+  background-color: #000 !important;
+}
+
+/* /class for change navbar color from black>transparent<black*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*     INTRO START */
+
+.intro-content {
+
+  /*height: 500px;*/
+  text-align: center;
+  /* Centraliza o conteúdo dentro da div */
+  color: whitesmoke;
+
+  text-transform: uppercase;
+  /* LETRA GRANDE */
+
+  background-position: center;
+  /* Centraliza a imagem na div */
+  background-size: cover;
+  padding: 200px;
+  /*background-image: url('/img/back1.jpg');*/
+}
+
+
+.about {
+
+  /*height: 500px;*/
+  text-align: center;
+  /* Centraliza o conteúdo dentro da div */
+
+
+ 
+  padding: 100px;
+  /*background-image: url('/img/back1.jpg');*/
+}
+
+/*============MY SOLUCION FOR OVAL FRAME WITH*/
+/*
+.oval-image {
+  width: 150px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: url(img/me.jpg);
+  background-size: cover; /* Optional 
+}        
+
+*/
+
+
+.skills-section .skill-icon {
+  padding-bottom: 15px;
+  height: 120px;
+}
+
+@media screen and (max-width: 360px) {
+  .skills-section .skill-icon {
+      padding-bottom: 0;
+      height: 100px;
+  }
+}
+
+.skills-section .skill-icon img {
+  margin: 0 auto;
+  width: 75px;
+  height: auto;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out
+}
+
+.skills-section .skill-icon img:hover {
+  -webkit-filter: none;
+  filter: none;
+}
+
+@media screen and (min-width: 450px) {
+  .skills-section .skill-icon img#html {
+      width: 55px;
+  }
+  .skills-section .skill-icon img#css {
+      width: 55px;
+  }
+  .skills-section .skill-icon img#sass {
+      margin-top: 15px;
+  }
+  .skills-section .skill-icon img#js {
+      width: 55px;
+  }
+  .skills-section .skill-icon img#node {
+      width: 100px;
+  }
+}
+
+@media screen and (min-width: 985px) {
+  .skills-section .skill-icon img#node {
+      margin-top: -10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .skills-section .skill-icon img {
+      width: 100%;
+      height: auto;
+  }
+}
+
+/*======INTRO END==============*/
+
+
+
+
+
+/* ======= ABOUT ======= */
+
+#about {
+  padding-top: 90px;
+  padding-bottom: 100px;
+}
+
+#about img#prof-pic {
+  width: 160px;
+  height: 115px;
+}
+
+#about p {
+  font-size: 16px;
+  max-width: 650px;
+  margin: 30px auto;
+}
+
+#about a {
+  font-weight: 500;
+}
+
+#about img {
+  border-radius: 50%;
+}
+
+#about #tl-dr {
+  background: #f0f0f0;
+  color: #555;
+  text-align: center;
+  margin: 0px auto;
+  padding: 20px;
+  height: 200px;
+  width: 50%;
+  max-width: 650px;
+}
+
+#about #tl-dr h3 {
+  font-weight: 300;
+  font-size: 22px;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+#about #tl-dr h4 {
+  font-weight: 300;
+  font-size: 17px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+#about #tl-dr h5 {
+  font-weight: 300;
+  font-size: 14px;
+  font-family: 'Roboto Slab', sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.tldr-proc {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tldr-icon {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 36px;
+  margin: 0 auto 10px;
+}
+
+#tldr-keyboard {
+  font-size: 50px;
+}
+
+@media screen and (max-width: 1100px) {
+  #about #tl-dr {
+      width: 70%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #about #tl-dr h3 {
+      font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  #about #tl-dr h3 {
+      font-size: 16px;
+  }
+  #about #tl-dr h4 {
+      font-size: 14px;
+  }
+  #about #tl-dr h5 {
+      font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #about #tl-dr {
+      padding: 30px 0;
+  }
+  #about #tl-dr h5 {
+      font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #about {
+      padding: 60px 10px;
+  }
+  #about #tl-dr h5 {
+      /*font-size: 10px;*/
+  }
+  .tldr-icon {
+      font-size: 30px;
+  }
+  #tldr-keyboard {
+      font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #about img#prof-pic {
+      width: 150px;
+  }
+  #about #tl-dr {
+      width: 90%;
+  }
+  h2 {
+      font-size: 22px;
+  }
+  .tlder-proc {
+      width: 32%;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #about #tl-dr {
+      padding: 20px 0;
+      height: 180px;
+      width: 95%;
+  }
+  #about #tl-dr h4 {
+      margin-bottom: 5px;
+  }
+  .tldr-icon {
+      /*font-size: 24px;*/
+  }
+  #tldr-keyboard {
+      font-size: 34px;
+  }
+}
+
+/* ======= ABOUT END ======= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======= INTRODUCTION ======= */
+
+#intro {
+  background: url(../img/wallpaper/skyb.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #000;
+  color: #000;
+  margin-top: 0; /*  adicionei*/
+}
+
+#intro .overlay {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(17%, rgba(0, 0, 0, 0.73)), color-stop(35%, rgba(0, 0, 0, 0.66)), color-stop(62%, rgba(0, 0, 0, 0.55)), color-stop(100%, rgba(0, 0, 0, 0.4)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  /* W3C */
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#66000000', GradientType=0);
+  /* IE6-9 */
+  height: 750px;
+  background-attachment: fixed;
+}
+
+#intro h1 {
+  color: #FFF;
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+#intro p.subtitle {
+  color: #ddd;
+}
+
+.intro-content {
+  position: absolute;
+  padding: 20% 0 5% 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .intro-content {
+      padding: 25% 0 5% 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .intro-content {
+      padding: 30% 0 5% 0;
+  }
+  .navbar-toggle {
+      padding: 0px 10px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .intro-content {
+      padding: 45% 0 5% 0;
+  }
+  a.fa.fa-angle-down {
+      margin-top: 80px !important;
+  }
+}
+
+a.fa.fa-angle-down {
+  padding: 10px 14px;
+  color: #aaa;
+  font-size: 50px;
+  margin-top: 175px;
+  transition: all 0.5s;
+}
+
+@media screen and (min-width: 1600px) {
+  a.fa.fa-angle-down {
+      position: relative;
+      bottom: 50px;
+  }
+}
+
+a.fa.fa-angle-down:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+a.fa.fa-angle-down:focus {
+  text-decoration: none;
+}
+
+
+/* ======= INTRODUCTION END ======= */
+
+
+
+
+
+
+
+/* ======= Waypoints ======= */
+
+
+
+.bounceIn,
+.bounceInLeft,
+.bounceInRight,
+.bounceInDown,
+.fadeIn,
+.fadeInUp,
+.fadeInUpDelay,
+.fadeInDown,
+.fadeInLeft,
+.fadeInRight,
+.slideInUp,
+.slideInDown,
+.slideInLeft,
+.slideInRight,
+.zoomIn,
+.swing,
+.pulse,
+.bounce,
+.progress1-delay,
+.progress2-delay,
+.progress3-delay,
+.progress4-delay,
+.progress5-delay {
+    visibility: visible;
+}
+
+.delay-01s {
+    animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s;
+}
+
+.delay-02s {
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+}
+
+.delay-025s {
+    animation-delay: 0.25s;
+    -webkit-animation-delay: 0.25s;
+}
+
+.delay-05s {
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+}
+
+.delay-1s {
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+
+.delay-4s {
+    animation-delay: 4s;
+    -webkit-animation-delay: 4s;
+}
+
+.delay-4-5s {
+    animation-delay: 4.5s;
+    -webkit-animation-delay: 4.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======= RESUME ======= */
+
+#resume {
+  background: url(../img/wallpaper/animelol2.jpg);
+  
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #000;
+  color: #fff;
+}
+
+#resume .overlay {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.8)), color-stop(17%, rgba(0, 0, 0, 0.73)), color-stop(35%, rgba(0, 0, 0, 0.66)), color-stop(62%, rgba(0, 0, 0, 0.55)), color-stop(100%, rgba(0, 0, 0, 0.4)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
+  /* W3C */
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#cc000000', endColorstr='#66000000', GradientType=0);
+  /* IE6-9 */
+  padding: 80px 0;
+  background-attachment: fixed;
+}
+
+#resume h2 {
+  color: #fff;
+}
+
+a.resume-btn {
+  background: none;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ddd;
+  border: 2px solid #ccc;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  letter-spacing: 1px;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out
+}
+
+a.resume-btn:hover,
+a.resume-btn:active {
+  /*background-position: -100% 100%;*/
+  color: #fff;
+  /*font-weight: 400;*/
+  border: 2px solid #ccc;
+  background-color: rgba(254, 254, 254, 0.2);
+  padding: 10px 30px;
+}
+
+
+/* ======= RESUME  END======= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======= CONTACT ======= */
+
+#contact {
+  padding-top: 50px;
+  padding-bottom: 70px;
+  background-color: #F0F0F0;
+}
+
+.email-icon {                /* =======email icon ======= */
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  max-width: 100%;
+  font-size: 55px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  margin: 0 auto 10px;
+}
+
+#contact p {
+  font-size: 16px;             /* ======= contact paragraph======= */
+  font-weight: 300;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+#contact #email-button {         /* ======= email button ======= */
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  /*border-radius: 30px;*/
+  border: 2px solid #000;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#contact #email-button:hover {
+  color: #fff;
+  background: rgb(10, 10, 10);
+  border: 2px solid rgb(252, 252, 253);
+}
+
+@media screen and (max-width: 480px) {
+  #contact {
+      padding: 15px 10px 50px;
+  }
+}
+
+/* ======= CONTACT ======= */
+
+
+
+
+
+
+
+/* Style MY  footer */
+footer {
+  background-color: #222;
+  padding: 10px;
+  bottom: 0;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+
+/* Style MY  footer */
+
+
+ .fa-linkedin-square, .fa-github-square, .fa-at, .fa-youtube-square {
+  color: blueviolet
+}
+
+
+ .fa-linkedin-square:hover{
+
+  color: orange;
+ 
+}
+ .fa-github-square:hover{
+  
+  color: orange;
+ 
+}
+ .fa-at:hover{
+  
+  color: orange;
+ 
+}
+
+ .fa-youtube-square:hover{
+  
+  color: orange;
+ 
+}
