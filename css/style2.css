@@ -111,16 +111,7 @@ a.active {
 }
 
 
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  height: 20px; /* Ajuste de acordo com a altura desejada */
-}
 
-.navbar-brand img {
-  width: 25px;
-  margin-right: 15px;
-}
 
 
 
@@ -252,7 +243,16 @@ a.active {
 
 
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  height: 20px; /* Ajuste de acordo com a altura desejada */
+}
 
+.navbar-brand img {
+  width: 25px;
+  margin-right: 15px;
+}
 
 
 
