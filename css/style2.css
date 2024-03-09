@@ -105,10 +105,7 @@ a.active {
 
 
 
-.navbar {
-  margin-bottom: 0;
-  z-index: 999;
-}
+
 
 
 
@@ -119,111 +116,7 @@ a.active {
 
 /* MY cCostom Navbar*/
 
-.topnav {
-  overflow: hidden;
-  font-size: 16px;
-  position:fixed;   /*   faz a navbar ficar fixa ao conteudo              */
-  z-index:1; /*Add this  faz o conteudo passar por baixo on scroll                  */
-  width:100%; /* estica o conteudo na nav para todo o ecra     comprimento            */
-  text-transform: uppercase; /* top nav caracteres texto letra grande      */
-  margin-bottom: 0;
-  border-color: transparent;
-  background-color: black;  /*cor fundo topnav preto mandatory for navbar change transparent to black*/
-  transition: background-color 1.3s; /* Adicionar transição suave na mudança de cor de fundo */
-  letter-spacing: 1px;
-  padding: 10px 0;
-  height: 35px;           /*height of navbar*/
-}
 
-
-
-
-.topnav a {
-
-
-  color: whitesmoke; /*cor BRANCO de default de tudo que esta dentro de a href*/
-  text-align: center;
-
-  text-decoration: none;
-  font-size: 13px;
-  margin-top: 0px;
-  margin-right: 20px;
-  font-family: "Lato", sans-serif;            /*aqui a font para os campos da nav  a  tag da ref e link */
-
-
-}
-
-.topnav a:hover {
-  outline: 0;
-  color: #ccc;                  /*passa a cor para cinza light quando se passa o rato por cima*/
-  background-color: transparent;     
-
-}
-
-
-
-
-.topnav a.active {
-  background-color:orange;     /*changes the  color highlight of links on navbar*/
-
-}
-
-/*
-.topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-
-}
-
-.topnav .search-container button {
-  float: right;
-  padding: 6px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: lightskyblue;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-}
-
-.topnav .search-container button:hover {
-  background: #ccc;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav .search-container {
-    float: none;
-  }
-
-  .topnav a,
-  .topnav input[type=text],
-  .topnav .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-
-  .topnav input[type=text] {
-    border: 1px solid #ccc;
-  }
-}
-
-*/
-.topnav img {
-
-
-  margin-right: 10px;
-  /* Adiciona margem à direita da imagem */
-  margin-left: 30px;
-  /* Adiciona margem à esquerda da imagem */
-  vertical-align: middle;
-  /* Alinha verticalmente a imagem */
-}
 
 
 
@@ -240,6 +133,70 @@ a.active {
 
 /* /class for change navbar color from black>transparent<black*/
 
+.navbar{
+  top: 0;/* Position the navbar at the top of the page */
+
+  font-size: 16px;
+  position:fixed;   /*   faz a navbar ficar fixa ao conteudo              */
+
+  width:100%; /* estica o conteudo na nav para todo o ecra     comprimento            */
+  text-transform: uppercase; /* top nav caracteres texto letra grande      */
+
+  background-color: black;  /*cor fundo topnav preto mandatory for navbar change transparent to black*/
+  transition: background-color 1.3s; /* Adicionar transição suave na mudança de cor de fundo */
+  letter-spacing: 1px;
+  padding: 10px 0;
+  height: 50px;           /*height of navbar*/
+}
+
+
+
+.navbar a:hover{
+
+
+color: whitesmoke;
+}
+
+
+.navbar a{
+
+
+color: whitesmoke;
+}
+
+
+
+.navbar a.active  {
+  background-color: orange;
+ 
+}
+
+
+.navbar-toggler:focus,
+.navbar-toggler-icon:focus {
+color: aliceblue;   /* color navbar togler */
+outline: none;
+box-shadow: none;                 /* remove border navbar togler */
+
+}
+
+.navbar-toggler {
+color: whitesmoke;
+      /* color navbar toggler */
+}
+
+
+.nav-link {
+text-align: center;       /* align center links on toggler */
+
+}
+
+
+
+
+
+
+
 
 
 
@@ -255,7 +212,22 @@ a.active {
 }
 
 
+/* CSS personalizado para garantir que o conteúdo da página apareça abaixo do menu suspenso do navbar-toggler*/
 
+@media (max-width: 991.98px) {
+  .collapse.show {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      background-color: black;
+  }
+
+  .navbar-expand-lg .navbar-collapse.show {
+      max-height: none;
+  }
+}
 
 
 
